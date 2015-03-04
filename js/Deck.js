@@ -20,12 +20,12 @@ function Deck(cards) {
         return this._cards.pop();
     };
 
-    this.pushCard = function (cards) {
+    this.pushCard = function (card) {
         this._cards.push(card);
     };
 
     this.pushCards = function (cards) {
-        this._cards.push(cards);
+        this._cards = this._cards.concat(cards);
     };
 
     this.split = function (count) {
@@ -42,5 +42,4 @@ function Deck(cards) {
         }
         return this._cards;
     }
-
 }
