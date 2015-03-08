@@ -1,0 +1,23 @@
+html {
+  background: #FFFFFF;
+  height: 100vh;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; }
+
+body {
+  width: 46rem;
+  height: 22.5rem;
+  margin: auto;
+  border: black solid 1px; }
+
+#decks {
+  display: flex;
+  height: 20rem; }
+
+.deck {
+  width: 10rem;
+  background: red;
+  margin: 0 .5rem; }
+
+/*# sourceMappingURL=style.css.map */

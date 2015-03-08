@@ -1,0 +1,41 @@
+$color_screen: #FFFFFF;
+$color_bg: #FFFFFF;
+$highlight: #640064;
+$hover: #8F0796;
+
+//@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+//3.998em
+//2.827em
+//1.999em
+//1.414em
+//1em
+//.707em
+//.5em
+//.354em
+
+html {
+  background: $color_screen;
+  height: 100vh;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  width: 46rem;
+  height: 22.5rem;
+  margin: auto;
+  border: black solid 1px;
+}
+
+#decks {
+  display: flex;
+  height: 20rem;
+}
+
+.deck {
+  width: 10rem;
+  background: red;
+  margin: 0 .5rem;
+}

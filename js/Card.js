@@ -2,7 +2,7 @@ function Card(value) {
     this._rawValue = value;
 
     this.getSuit = function () {
-        return this._rawValue / 12;
+        return Math.floor(this._rawValue / 13);
     };
 
     this.getSuitStr = function () {
@@ -20,7 +20,7 @@ function Card(value) {
     };
 
     this.getFace = function () {
-        return this._rawValue % 12;
+        return this._rawValue % 13;
     };
 
     this.getFaceStr = function () {
@@ -29,17 +29,21 @@ function Card(value) {
             return "ace";
         }
 
-        if (face < 9) {
+        if (face < 10) {
             return "" + (face + 1);
         }
 
         switch (face) {
-            case 9:
-                return "jack";
             case 10:
-                return "queen";
+                return "jack";
             case 11:
+                return "queen";
+            case 12:
                 return "king";
         }
+    }
+
+    this.toString = function () {
+        return this.getFaceStr() + " of " + this.getSuitStr();
     }
 }

@@ -5,6 +5,32 @@
     <title>What Is It Good For?</title>
 </head>
 <body>
-
+<div id="title">
+    A Game of War
+</div>
+<div id="game_ui">
+    <div id="decks">
+        <div id="deck_1" class="deck"></div>
+        <div id="stack_1" class="deck"></div>
+        <div>
+            vs
+        </div>
+        <div id="stack_2" class="deck"></div>
+        <div id="deck_2" class="deck"></div>
+    </div>
+    <div id="message"></div>
+</div>
 </body>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="./js/Card.js"></script>
+<script src="./js/Deck.js"></script>
+<script src="./js/GameState.js"></script>
+<script src="./js/Game.js"></script>
+<script src="./js/Ui.js"></script>
+<script>
+    var ui = new Ui();
+    var game = new Game(ui);
+    game.playGame();
+</script>
 </html>
