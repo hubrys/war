@@ -8,17 +8,40 @@
 <div id="title">
     A Game of War
 </div>
+<div id="start_ui">
+    <h1 id="upper_message">
+        Who are you betting on?
+    </h1>
+
+    <h1 id="lower_message">
+
+    </h1>
+
+    <div id="player_choices">
+        <div id="player_1">
+            Player 1
+        </div>
+        <div id="player_2">
+            Player 2
+        </div>
+    </div>
+</div>
 <div id="game_ui">
     <div id="decks">
-        <div id="deck_1" class="deck"></div>
-        <div id="stack_1" class="deck"></div>
-        <div>
-            vs
+        <div class="player_deck">
+            <div class="player_name"> Player 1</div>
+            <div id="deck_1" class="deck"></div>
         </div>
-        <div id="stack_2" class="deck"></div>
-        <div id="deck_2" class="deck"></div>
+        <div id="stack_1" class="stack"></div>
+        <div class="vs">vs</div>
+        <div id="stack_2" class="stack"></div>
+        <div class="player_deck">
+            <div class="player_name"> Player 2</div>
+            <div id="deck_2" class="deck"></div>
+        </div>
     </div>
     <div id="message"></div>
+    <input type="range" id="tick_speed" value="70">
 </div>
 </body>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -28,9 +51,10 @@
 <script src="./js/GameState.js"></script>
 <script src="./js/Game.js"></script>
 <script src="./js/Ui.js"></script>
+<script src="./js/Input.js"></script>
 <script>
     var ui = new Ui();
     var game = new Game(ui);
-    game.playGame();
+    game.start();
 </script>
 </html>

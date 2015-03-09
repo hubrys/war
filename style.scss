@@ -1,7 +1,7 @@
 $color_screen: #FFFFFF;
 $color_bg: #FFFFFF;
-$highlight: #640064;
-$hover: #8F0796;
+$highlight: #446CB3;
+$hover: #2C3E50;
 
 //@import url(http://fonts.googleapis.com/css?family=Roboto);
 
@@ -20,13 +20,47 @@ html {
   display: flex;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  color: $hover;
 }
 
 body {
-  width: 46rem;
-  height: 22.5rem;
+  height: 24.5rem;
+  width: 39.5rem;
   margin: auto;
-  border: black solid 1px;
+//  border: black solid 1px;
+}
+
+#start_ui {
+  margin-left: 2rem;
+}
+
+#game_ui {
+  display: none;
+}
+
+#title {
+  font-size: 2rem;
+  line-height: 3rem;
+  vertical-align: middle;
+}
+
+#player_choices {
+  margin-left: 2rem;
+
+  div {
+    width: 10rem;
+    padding-left: 1rem;
+    margin: .5rem;
+    font-size: 1.414rem;
+    line-height: 3rem;
+    background: $highlight;
+    color: white;
+
+    transition: all .35s ease-in-out;
+    &:hover {
+      background-color: $hover;
+    }
+  }
 }
 
 #decks {
@@ -34,8 +68,68 @@ body {
   height: 20rem;
 }
 
-.deck {
-  width: 10rem;
-  background: red;
+#message {
+  font-size: 1.414rem;
+  line-height: 2rem;
+  margin-left: 1rem;
+  color: $highlight;
+}
+
+.player_name {
+  color: $highlight;
+  font-size: 1.414rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.player_deck {
+  width: 13rem;
   margin: 0 .5rem;
+  display: block;
+}
+
+.deck {
+  width: 13rem;
+  display: inline;
+  position: relative;;
+}
+
+.stack {
+  width: 3.2rem;
+  margin: 0 .5rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.vs {
+  width: 1rem;
+  top: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.card {
+  width: 3rem;
+  height: 5rem;
+  margin: .1rem;
+  line-height: 2.5rem;
+  background: white;
+  border: solid black 1.5px;
+  border-radius: .5rem;
+  top: 0;
+  position: absolute;
+  color: red;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card_face_down {
+  @extend .card;
+  border-color: white;
+  background-image: url("./card_back.jpeg");
+  background-position: 50% 50%;
+}
+
+#tick_speed {
+  margin-left: 1rem;
 }

@@ -3,7 +3,8 @@ function GameState() {
     this.deck2 = null;
     this.stack1 = [];
     this.stack2 = [];
-    this.state = null;
+    this.state = "idle";
+    this.favoredPlayer = 0;
 
     this.restart = function () {
         this.deck1 = new Deck();
@@ -11,12 +12,12 @@ function GameState() {
         this.deck2 = this.deck1.split(26); // split deck in half
         this.stack1 = [];
         this.stack2 = [];
-        this.state = "idle";
+        this.state = "running";
     };
 
     this.tick = function () {
         switch (this.state) {
-            case "idle":
+            case "running":
             case "cardsToOne":
             case "cardsToTwo":
                 if (this.deck1.cardCount() === 0) {

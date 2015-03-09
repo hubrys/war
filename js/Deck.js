@@ -17,7 +17,7 @@ function Deck(cards) {
     };
 
     this.popCard = function () {
-        return this.cards.pop();
+        return this.cards.shift();
     };
 
     this.pushCard = function (card) {

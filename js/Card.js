@@ -8,13 +8,13 @@ function Card(value) {
     this.getSuitStr = function () {
         switch (this.getSuit()) {
             case 0:
-                return "hearts";
+                return "\u2665";
             case 1:
-                return "clubs";
+                return "\u2663";
             case 2:
-                return "diamonds";
+                return "\u2666";
             case 3:
-                return "spades";
+                return "\u2660";
         }
         return null;
     };
@@ -25,25 +25,23 @@ function Card(value) {
 
     this.getFaceStr = function () {
         var face = this.getFace();
-        if (face === 0) {
-            return "ace";
-        }
-
-        if (face < 10) {
-            return "" + (face + 1);
+        if (face < 9) {
+            return "" + (face + 2);
         }
 
         switch (face) {
+            case 9:
+                return "J";
             case 10:
-                return "jack";
+                return "Q";
             case 11:
-                return "queen";
+                return "K";
             case 12:
-                return "king";
+                return "A";
         }
-    }
+    };
 
     this.toString = function () {
-        return this.getFaceStr() + " of " + this.getSuitStr();
-    }
+        return this.getFaceStr() + "<br/>" + this.getSuitStr();
+    };
 }
